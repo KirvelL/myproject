@@ -1,0 +1,63 @@
+﻿@model IEnumerable<StudentsHelper.Domain.Teacher>
+
+@{
+    ViewData["Title"] = "Teachers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Teachers</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OtherInformation)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <div class="form-group">
+                    <img src="https://studenthelperblob.blob.core.windows.net/avatar/@item.Avatar" alt="Image" class="profile-image"/>
+                </div>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherInformation)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { item.Id }) |
+                @Html.ActionLink("Details", "Details", new { item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

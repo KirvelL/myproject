@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-StudentHelper-16B5145E-E0FD-42C9-B77D-891AC034298A</UserSecretsId>
+    <Configurations>Debug;Release;Stage</Configurations>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentsHelper.Domain.Interfaces\StudentsHelper.Domain.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Domain.Services\StudentsHelper.Domain.Services.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Domain\StudentsHelper.Domain.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Infastructure.Interfaces\StudentsHelper.Infastructure.Interfaces.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Infastructure\StudentsHelper.Infastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Reviews\AddReview.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Reviews\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Reviews\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Reviews\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Reviews\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Reviews\Reviews.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Materials\" />
+  </ItemGroup>
+
+</Project>

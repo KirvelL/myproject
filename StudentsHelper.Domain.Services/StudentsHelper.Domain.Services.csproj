@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Stage</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentsHelper.Domain.Interfaces\StudentsHelper.Domain.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Domain\StudentsHelper.Domain.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Infastructure.Interfaces\StudentsHelper.Infastructure.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Stage</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentsHelper.Domain.Interfaces\StudentsHelper.Domain.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Domain.Services\StudentsHelper.Domain.Services.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Domain\StudentsHelper.Domain.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Infastructure.Interfaces\StudentsHelper.Infastructure.Interfaces.csproj" />
+    <ProjectReference Include="..\StudentsHelper.Infastructure\StudentsHelper.Infastructure.csproj" />
+  </ItemGroup>
+
+</Project>

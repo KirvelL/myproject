@@ -1,0 +1,19 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using StudentsHelper.Domain;
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@inject SignInManager<User> SignInManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2>Create Review</h2>
+@{Html.BeginForm("CreateReview", "Home", FormMethod.Post);}
+<div class="item">
+    <label>Text</label>
+    <input name="Text"/>
+</div>
+<input type="submit" value="Отправить" />
+@{Html.EndForm();}
